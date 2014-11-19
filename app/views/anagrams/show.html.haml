@@ -1,0 +1,14 @@
+%h3
+  - @anagrams.each do |anagram, anagrams|
+    &nbsp;
+    = surround '{', '}' do
+      %span.label.label-success
+        = anagram
+      = ':'
+      = surround '[', ']' do
+        &nbsp;
+        - anagrams.each do |a|
+          %span.label.label-default
+            = a
+          &nbsp;
+      &nbsp;
